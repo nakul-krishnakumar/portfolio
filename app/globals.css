@@ -34,15 +34,15 @@ body {
   }
 
   .profile-card {
-    @apply w-[95%] h-auto gap-4 sm:gap-0 sm:h-[640px] bg-white rounded-lg flex flex-col items-center justify-between text-center py-6 md:w-[344px] sm:my-[3rem] md:my-auto;
+    @apply w-[95%] h-auto gap-4 sm:gap-0 sm:h-[640px] bg-white rounded-lg flex flex-col items-center justify-between text-center py-6 sm:py-8 md:w-[344px] sm:my-[3rem] md:my-auto md:fixed;
   }
 
   .profile-card_title {
-    @apply text-secondary font-bold text-[28px] -tracking-[6%];
+    @apply text-secondary font-bold text-[28px] -tracking-[6%] max-xs:leading-6;
   }
 
   .profile-card_desc {
-    @apply text-black-300 text-[18px] font-semibold leading-5 w-[300px];
+    @apply text-black-300 text-[18px] font-semibold leading-5 max-w-[300px];
   }
 
   .profile-card_socials {
@@ -62,6 +62,10 @@ body {
   }
 
   .highlight {
-    @apply font-semibold text-primary-100;
+    @apply font-semibold gradient-text;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-text bg-clip-text text-transparent;
   }
 }

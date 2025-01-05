@@ -12,7 +12,7 @@ const config: Config = {
   theme: {
   	extend: {
   		screens: {
-  			xs: '395px',
+  			xs: '320px',
   			md: '1080px'
   		},
   		colors: {
@@ -77,7 +77,10 @@ const config: Config = {
   			'100': '2px 2px 0px 0px rgb(0, 0, 0)',
   			'200': '2px 2px 0px 2px rgb(0, 0, 0)',
   			'300': '2px 2px 0px 2px rgb(59, 214, 102)'
-  		}
+  		},
+		backgroundImage: {
+			'gradient-text': 'linear-gradient(to right, #8686f7, #9191F6)',
+		}
   	}
   },
   plugins: [Animate],

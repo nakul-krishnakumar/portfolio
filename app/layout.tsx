@@ -67,10 +67,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} antialiased`}
+        className={`${poppins.variable} antialiased relative`}
       > 
         <div className="w-screen h-[50px] text-center bg-white-100 mb-7 sm:mb-24 md:mb-0">Navbar</div>
-        <div className="flex flex-col items-center md:flex-row w-screen h-screen sm:px-10 gap-5">
+        <div className="flex flex-col items-center md:flex-row w-screen h-screen md:px-10 gap-5">
           <ProfileCard />
           <div className="md:self-start">
             {children}
