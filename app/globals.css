@@ -1,15 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #060112;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #060112;
     --foreground: #ededed;
   }
 }
@@ -17,11 +19,49 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  cursor: default;
+}
+
+@layer base {
+  :root {
+      --radius: 16px;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .profile-card {
+    @apply w-[95%] h-auto gap-4 sm:gap-0 sm:h-[640px] bg-white rounded-lg flex flex-col items-center justify-between text-center py-6 md:w-[344px] sm:my-[3rem] md:my-auto;
+  }
+
+  .profile-card_title {
+    @apply text-secondary font-bold text-[28px] -tracking-[6%];
+  }
+
+  .profile-card_desc {
+    @apply text-black-300 text-[18px] font-semibold leading-5 w-[300px];
+  }
+
+  .profile-card_socials {
+    @apply flex w-full justify-center items-center gap-5;
+  }
+
+  .profile-card_icons {
+    @apply text-primary-100 hover:translate-y-[-5px] duration-500 ease-in-out hover:text-primary-200 hover:cursor-pointer;
+  }
+
+  .about-title {
+    @apply text-white-100 text-[52px] font-bold leading-none -tracking-[1%] text-center mt-8 mb-6 h-[6rem] sm:text-[84px] sm:mt-[6rem] sm:mb-[5rem] md:mb-[8rem] md:text-[104px] sm:leading-[72px] md:leading-[96px] md:text-left;
+  }
+
+  .about-paragraph {
+    @apply text-center font-medium text-[16px] w-[98%] max-w-[630px] md:text-left;
+  }
+
+  .highlight {
+    @apply font-semibold text-primary-100;
   }
 }
