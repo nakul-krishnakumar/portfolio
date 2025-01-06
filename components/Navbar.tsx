@@ -26,7 +26,7 @@ const Navbar = () => {
     <header className="w-full">
         <nav className="w-full flex justify-center pt-3">
                 <div className='fixed'>
-                  <div className='flex w-full space-x-2 sm:space-x-5 rounded-xl border border-zinc-950/10 bg-white/50 p-2'>
+                  <div className='flex w-full space-x-2 sm:space-x-8 rounded-xl border border-zinc-950/10 bg-white/50 p-2 backdrop-blur-sm'>
                     <AnimatedBackground
                       defaultValue={TABS[0].label}
                       className='rounded-lg bg-primary-100'

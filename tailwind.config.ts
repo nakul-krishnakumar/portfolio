@@ -65,7 +65,8 @@ const config: Config = {
   		},
   		fontFamily: {
   			'poppins': [
-  				'var(--font-poppins)'
+  				'var(--font-poppins)',
+				'sans-serif'
   			]
   		},
   		borderRadius: {
