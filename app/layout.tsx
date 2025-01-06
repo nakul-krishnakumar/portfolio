@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import ProfileCard from "@/components/ProfileCard";
+import Navbar from "@/components/Navbar";
+import { Spotlight } from "@/components/ui/spotlight";
+import MeshGradientBackground from "@/components/ui/mesh-gradient-background"
 
 const poppins = localFont({
   src: [
@@ -68,12 +71,30 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${poppins.variable} antialiased relative`}
-      > 
-        <div className="w-screen h-[50px] text-center bg-white-100 mb-7 sm:mb-24 md:mb-0">Navbar</div>
-        <div className="flex flex-col items-center md:flex-row w-screen h-screen md:px-10 gap-5">
-          <ProfileCard />
-          <div className="md:self-start">
-            {children}
+      >   
+        {/* Background layer */}
+        <div className="fixed inset-0 overflow-hidden">
+          <MeshGradientBackground />
+        </div>
+        
+        {/* Content layer */}
+        <div className="relative z-10">
+          <Spotlight
+            className='bg-primary blur-[400px] -z-10'
+            size={256}
+            springOptions={{
+              bounce: 0.3,
+              duration: 0.1,
+            }}
+          />
+          <Navbar />
+          <div className="main-container">
+            <div className="child-wrapper">
+              <ProfileCard />
+              <div className="md:self-start">
+                {children}
+              </div>
+            </div>
           </div>
         </div>
       </body>

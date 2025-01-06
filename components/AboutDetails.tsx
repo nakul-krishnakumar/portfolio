@@ -2,7 +2,7 @@ import AnimatedText from "./ui/typed";
 
 const AboutDetails = () => {
   return (
-    <section className="md:ml-[25rem] md:pt-3">
+    <section className="md:ml-[25rem]">
           <AnimatedText >
             <h1 className="about-title">SOFTWARE <br/><span className="gradient-text">ENGINEER</span></h1>
             <h1 className="about-title">FULL-STACK <br/><span className="gradient-text">DEVELOPER</span></h1>

@@ -33,8 +33,16 @@ body {
     text-wrap: balance;
   }
 
+  .main-container {
+    @apply flex flex-col items-center justify-center md:flex-row w-screen h-screen gap-5;
+  }
+
+  .child-wrapper {
+    @apply flex flex-col items-center md:flex-row md:w-[80%] w-screen sm:h-[640px] sm:pt-[4rem] md:pt-0;
+  }
+
   .profile-card {
-    @apply w-[95%] h-auto gap-4 sm:gap-0 sm:h-[640px] bg-white rounded-lg flex flex-col items-center justify-between text-center py-6 sm:py-8 md:w-[344px] sm:my-[3rem] md:my-auto md:fixed;
+    @apply w-[95%] h-auto gap-4 sm:gap-0 sm:h-[640px] bg-white rounded-lg flex flex-col items-center justify-between text-center py-6 sm:py-8 md:w-[344px] md:fixed;
   }
 
   .profile-card_title {
@@ -54,11 +62,11 @@ body {
   }
 
   .about-title {
-    @apply text-white-100 text-[52px] font-bold leading-none -tracking-[1%] text-center mt-8 mb-6 h-[6rem] sm:text-[84px] sm:mt-[6rem] sm:mb-[5rem] md:mb-[8rem] md:text-[104px] sm:leading-[72px] md:leading-[96px] md:text-left;
+    @apply text-white-100 text-[52px] font-bold leading-none -tracking-[1%] text-center mt-8 mb-6 h-[6rem] sm:text-[84px] sm:mt-[10rem] sm:mb-[5rem] md:mt-0 md:mb-[8rem] md:text-[104px] sm:leading-[72px] md:leading-[96px] md:text-left;
   }
 
   .about-paragraph {
-    @apply text-center font-medium text-[16px] w-[98%] max-w-[630px] md:text-left;
+    @apply text-center font-medium text-[16px] w-[98%] max-w-[630px] sm:text-[18px] md:text-left ;
   }
 
   .highlight {
@@ -67,5 +75,9 @@ body {
 
   .gradient-text {
     @apply bg-gradient-text bg-clip-text text-transparent;
+  }
+
+  .navbar_icons {
+    @apply h-5 w-5 text-primary/80 hover:text-primary-200;
   }
 }
