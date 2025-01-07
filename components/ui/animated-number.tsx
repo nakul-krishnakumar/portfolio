@@ -1,12 +1,12 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { motion, SpringOptions, useSpring, useTransform } from 'motion/react';
+import { motion, Spring, useSpring, useTransform } from 'motion/react';
 import { useEffect } from 'react';
 
 type AnimatedNumber = {
   value: number;
   className?: string;
-  springOptions?: SpringOptions;
+  springOptions?: Spring;
 };
 
 export function AnimatedNumber({

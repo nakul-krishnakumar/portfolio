@@ -76,7 +76,7 @@ export default function RootLayout({
                 </div>
 
                 {/* Content layer */}
-                <div className="relative z-10">
+                <div className="relative z-10 overflow-x-hidden pb-[10rem]">
                     <Spotlight
                         className="bg-primary blur-[400px] -z-10"
                         size={256}
@@ -88,9 +88,10 @@ export default function RootLayout({
                     />
                     <Navbar />
                     <div className="main-container">
-                        <div className="child-wrapper">
+                        <div className="child-wrapper" id="home">
                             <ProfileCard />
-                            <div className="md:self-start">{children}</div>
+                            <div className="profile-card-skeleton"></div>
+                            {children}
                         </div>
                     </div>
                 </div>
