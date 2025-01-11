@@ -3,7 +3,7 @@ import SkillsPage from "./skillsPage";
 
 const RootPage = () => {
   return (
-    <main className="flex flex-col gap-20 sm:gap-[10rem] items-center w-full md:ml-[6rem]">
+    <main className="w-full flex flex-col gap-20 sm:gap-[10rem] items-center flex-1">
         <AboutPage />
         <SkillsPage />
     </main>

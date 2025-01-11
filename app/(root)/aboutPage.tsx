@@ -6,7 +6,7 @@ import { MapPinHouse, MoveUpRight } from "lucide-react";
 const AboutPage = () => {
 
     return (
-        <section className="md:ml-[5rem] flex flex-col gap-16 sm:w-[90%] md:w-[80%] px-2">
+        <section className="flex flex-col gap-16 sm:w-[90%] md:w-[80%] px-2">
             <section>
                 <AnimatedText>
                     <h1 className="about-title">
@@ -19,7 +19,7 @@ const AboutPage = () => {
                     </h1>
                 </AnimatedText>
                 <div className="about-paragraph">
-                    <p className="max-w-[630px] mx-auto">
+                    <p className="max-w-[630px] mx-auto md:mx-0">
                         Driven by a passion for{" "}
                         <mark className="highlight">machine learning</mark> and
                         innovation, I constantly explore new technologies to transform
@@ -52,7 +52,7 @@ const AboutPage = () => {
                   <span className="about-numbers_details">SUCCESSFUL <br/>COMMITS</span>
                 </div>
             </section>
-            <section className="about-buttons flex flex-col gap-5 items-center xs:flex-row justify-between">
+            <section className="about-buttons">
                 <Button variant="outline" className="!w-max backdrop-blur-md rounded-2xl !py-5 hover:bg-white-100 hover:text-primary hover:border-none">
                     <MapPinHouse />
                     <span>Kerala, India</span>
