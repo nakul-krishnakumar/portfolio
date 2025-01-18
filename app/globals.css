@@ -92,7 +92,7 @@ body {
   }
 
   .skills-grid-item {
-    @apply w-full h-32 border-[1px] border-zinc-200/90 rounded-2xl backdrop-blur-lg;
+    @apply w-full h-full border-[1px] border-zinc-200/90 rounded-2xl backdrop-blur-lg;
   }
 
   .highlight {
