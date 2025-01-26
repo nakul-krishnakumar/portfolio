@@ -92,7 +92,18 @@ body {
   }
 
   .skills-grid-item {
-    @apply w-full h-full border-[1px] border-zinc-200/90 rounded-2xl backdrop-blur-lg;
+    @apply w-full h-full border-[1px] bg-white-100/10 border-zinc-200/60 rounded-2xl backdrop-blur-lg ;
+  }
+
+  .skills-grid-item_icons {
+    @apply w-full h-full flex justify-evenly items-center pt-5 backdrop-blur-[2px] rounded-2xl;
+  }
+
+  .skills-grid-item_watermark {
+    @apply absolute inset-0 flex items-center justify-center;
+  }
+  .skills-grid-item_watermark-text {
+    @apply font-bold text-[70px] 2xl:text-[100px] text-white/10 -z-50;
   }
 
   .highlight {

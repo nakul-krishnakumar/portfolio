@@ -395,7 +395,7 @@ export function GlobeAnimation() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-full relative w-full rounded-xl mt-[5rem]">
+    <div className="flex flex-row items-center justify-center py-10 h-full relative w-full rounded-xl mt-10">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full px-4">
         <motion.div
           initial={{
@@ -411,12 +411,11 @@ export function GlobeAnimation() {
           }}
           className="div"
         >
-        <h2 className="text-center text-xl md:text-4xl font-bold text-white">
-            Available 24*7
+        <h2 className="text-center text-xl font-bold text-white/70">
+            I&apos;m very flexible with time zone communications
         </h2>
         </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-full bg-gradient-to-b pointer-events-none select-none z-40" />
-        <div className="absolute w-full -bottom-20 h-full z-10 ml-[-15px]">
+        <div className="absolute w-full -bottom-20 h-full -ml-[15px]">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
