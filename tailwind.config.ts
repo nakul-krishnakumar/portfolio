@@ -12,7 +12,7 @@ const config: Config = {
   theme: {
   	extend: {
   		screens: {
-  			xs: '320px',
+  			xs: '350px',
   			md: '1080px'
   		},
   		colors: {

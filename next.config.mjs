@@ -5,7 +5,11 @@ const nextConfig = {
     },
     eslint: {
         ignoreDuringBuilds: true,
-    }
+    },
+    images: {
+        domains: ['skillicons.dev'],
+        dangerouslyAllowSVG: true,
+    },
 };
 
 export default nextConfig;
