@@ -2,7 +2,9 @@
 
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+// import leetcodeLogo from '@/public/leetcode.svg'
 
 const ProfileCard = () => {
     const [isSmallViewport, setIsSmallViewport] = useState(false);
@@ -53,10 +55,21 @@ const ProfileCard = () => {
                     to excellence.
                 </p>
                 <div className="profile-card_socials">
-                    <Linkedin className="profile-card_icons" />
-                    <Instagram className="profile-card_icons" />
-                    <Github className="profile-card_icons" />
-                    <Mail className="profile-card_icons" />
+                    <Link href={"https://www.linkedin.com/in/nakul-krishnakumar-9aa951282"} target="_">
+                        <Linkedin className="profile-card_icons"/>
+                    </Link>
+                    <Link href={"https://www.instagram.com/nnnakuuul/"} target="_">
+                        <Instagram className="profile-card_icons" />
+                    </Link>
+                    <Link href={"https://github.com/nakul-krishnakumar"} target="_">
+                        <Github className="profile-card_icons" />
+                    </Link>
+                    <Link href={"mailto:nakulkrishnakumar86@gmail.com"} target="_">
+                        <Mail className="profile-card_icons" />
+                    </Link>
+                    {/* <Link href={"mailto:nakulkrishnakumar86@gmail.com"} target="_">
+                        <Image src={leetcodeLogo} alt="Leetcode" className="profile-card_icons" />
+                    </Link> */}
                 </div>
             </div>
         </section>
