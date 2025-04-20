@@ -5,7 +5,8 @@ import ProfileCard from "@/components/ProfileCard";
 import Navbar from "@/components/Navbar";
 import { Spotlight } from "@/components/ui/spotlight";
 import MeshGradientBackground from "@/components/ui/mesh-gradient-background";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const poppins = localFont({
     src: [
@@ -94,6 +95,7 @@ export default function RootLayout({
                             <div className="profile-card-skeleton"></div>
                             {children}
                             <Analytics />
+                            <SpeedInsights />
                         </div>
                     </div>
                 </div>
