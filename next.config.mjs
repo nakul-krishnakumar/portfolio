@@ -7,7 +7,12 @@ const nextConfig = {
         ignoreDuringBuilds: true,
     },
     images: {
-        domains: ['skillicons.dev'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'skillicons.dev',
+            }
+        ],
         dangerouslyAllowSVG: true,
     },
 };
