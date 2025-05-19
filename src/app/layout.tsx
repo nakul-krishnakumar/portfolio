@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./global.css"
+import "./global.css";
 import ProfileCard from "../components/ProfileCard";
 import Navbar from "../components/Navbar";
 import { Spotlight } from "../components/ui/spotlight";
@@ -78,7 +78,7 @@ export default function RootLayout({
                 </div>
 
                 {/* Content layer */}
-                <div className="relative z-10 overflow-x-hidden pb-[10rem]">
+                <div className="relative z-10 overflow-x-hidden overflow-y-auto pb-[5rem] sm:pb-[8rem] md:pb-[10rem]">
                     <Spotlight
                         className="bg-primary blur-[400px] -z-10"
                         size={256}

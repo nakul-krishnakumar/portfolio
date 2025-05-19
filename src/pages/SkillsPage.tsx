@@ -3,9 +3,11 @@ import Image from "next/image";
 
 const SkillsSection = () => {
     return (
-        <section id="skills" className="w-full px-3 text-center">
-            <h1 className="font-bold text-[56px]">SKILLS</h1>
-            <section className="grid grid-cols-1 grid-rows-6 sm:grid-cols-6 justify-center w-full h-[56rem] gap-1">
+        <section id="skills" className="w-full px-3 md:px-5 text-center">
+            <h1 className="font-bold text-[42px] sm:text-[56px] mb-6 sm:mb-10">
+                SKILLS
+            </h1>
+            <section className="grid grid-cols-1 grid-rows-auto sm:grid-cols-6 justify-center w-full max-w-[1400px] mx-auto min-h-[30rem] sm:h-[56rem] gap-2 sm:gap-3">
                 <div className="skills-grid-item sm:col-span-4">
                     <div className="skills-grid-item_icons">
                         <div className="flex flex-col items-center">
@@ -81,7 +83,7 @@ const SkillsSection = () => {
                 </div>
 
                 <div className="skills-grid-item sm:col-span-4 flex justify-center items-center">
-                    <div className="grid grid-rows-2 grid-cols-4 justify-center items-center backdrop-blur-[2px] rounded-2xl xs:skills-grid-item_icons">
+                    <div className="grid grid-rows-2 grid-cols-3 xs:grid-cols-4 gap-2 py-3 px-2 sm:py-4 sm:px-4 justify-items-center items-center backdrop-blur-[2px] rounded-2xl xs:skills-grid-item_icons">
                         <div className="flex flex-col items-center">
                             <Image
                                 src="https://skillicons.dev/icons?i=nodejs"
@@ -327,7 +329,7 @@ const SkillsSection = () => {
                 <div className="hidden sm:block skills-grid-item sm:col-span-2"></div>
 
                 <div className="skills-grid-item sm:col-span-4 sm:row-span-2">
-                    <div className="grid grid-cols-4 grid-rows-2 px-10 sm:py-10 sm:px-20 justify-center items-center h-full backdrop-blur-[2px] rounded-2xl">
+                    <div className="grid grid-cols-3 xs:grid-cols-4 grid-rows-2 gap-2 sm:gap-3 px-2 xs:px-4 py-3 sm:py-10 sm:px-20 justify-center items-center h-full backdrop-blur-[2px] rounded-2xl">
                         <div className="flex flex-col items-center">
                             <Image
                                 src="https://skillicons.dev/icons?i=js"

@@ -5,7 +5,7 @@ import { MapPinHouse, MoveUpRight } from "lucide-react";
 
 const AboutSection = () => {
     return (
-        <section className="flex flex-col gap-16 sm:w-[90%] md:w-[80%] px-2">
+        <section className="flex flex-col gap-10 sm:gap-16 w-full sm:w-[90%] md:w-[85%] lg:w-[80%] px-2 sm:px-4">
             <section>
                 <AnimatedText>
                     <h1 className="about-title">
@@ -13,12 +13,12 @@ const AboutSection = () => {
                         <span className="gradient-text">ENGINEER</span>
                     </h1>
                     <h1 className="about-title">
-                        FULL-STACK <br />
-                        <span className="gradient-text">DEVELOPER</span>
+                        AI & ML <br className="sm:block" />
+                        <span className="gradient-text">ENGINEER</span>
                     </h1>
                 </AnimatedText>
-                <div className="about-paragraph">
-                    <p className="max-w-[630px] mx-auto md:mx-0">
+                <div className="about-paragraph mt-4 sm:mt-6">
+                    <p className="max-w-[630px] mx-auto md:mx-0 text-[15px] sm:text-[16px]">
                         Driven by a passion for{" "}
                         <mark className="highlight">machine learning</mark> and
                         innovation, I constantly explore new technologies to
@@ -75,14 +75,18 @@ const AboutSection = () => {
             <section className="about-buttons">
                 <Button
                     variant="outline"
-                    className="!w-max backdrop-blur-md rounded-2xl !py-5 hover:bg-white-100 hover:text-primary hover:border-none"
+                    className="!w-max backdrop-blur-md rounded-2xl !py-4 sm:!py-5 hover:bg-white-100 hover:text-primary hover:border-none"
                 >
-                    <MapPinHouse />
-                    <span>Kerala, India</span>
+                    <MapPinHouse className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <span className="ml-1 sm:ml-2 text-[14px] sm:text-[16px]">
+                        Kerala, India
+                    </span>
                 </Button>
-                <Button className="!w-max bg-white-100 text-primary hover:bg-primary hover:text-white !py-5 rounded-2xl">
-                    <span>Contact Me</span>
-                    <MoveUpRight />
+                <Button className="!w-max bg-white-100 text-primary hover:bg-primary hover:text-white !py-4 sm:!py-5 rounded-2xl">
+                    <span className="mr-1 sm:mr-2 text-[14px] sm:text-[16px]">
+                        Contact Me
+                    </span>
+                    <MoveUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
             </section>
         </section>

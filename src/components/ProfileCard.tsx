@@ -55,16 +55,30 @@ const ProfileCard = () => {
                     to excellence.
                 </p>
                 <div className="profile-card_socials">
-                    <Link href={"https://www.linkedin.com/in/nakul-krishnakumar-9aa951282"} target="_">
-                        <Linkedin className="profile-card_icons"/>
+                    <Link
+                        href={
+                            "https://www.linkedin.com/in/nakul-krishnakumar-9aa951282"
+                        }
+                        target="_"
+                    >
+                        <Linkedin className="profile-card_icons" />
                     </Link>
-                    <Link href={"https://www.instagram.com/nnnakuuul/"} target="_">
+                    <Link
+                        href={"https://www.instagram.com/nnnakuuul/"}
+                        target="_"
+                    >
                         <Instagram className="profile-card_icons" />
                     </Link>
-                    <Link href={"https://github.com/nakul-krishnakumar"} target="_">
+                    <Link
+                        href={"https://github.com/nakul-krishnakumar"}
+                        target="_"
+                    >
                         <Github className="profile-card_icons" />
                     </Link>
-                    <Link href={"mailto:nakulkrishnakumar86@gmail.com"} target="_">
+                    <Link
+                        href={"mailto:nakulkrishnakumar86@gmail.com"}
+                        target="_"
+                    >
                         <Mail className="profile-card_icons" />
                     </Link>
                     {/* <Link href={"mailto:nakulkrishnakumar86@gmail.com"} target="_">
