@@ -48,6 +48,24 @@ const ProfileCard = () => {
                     </>
                 )}
                 <h2 className="profile-card_title">NAKUL KRISHNAKUMAR</h2>
+                <div className="flex flex-wrap gap-1 mb-10 justify-center px-8">
+                    {[
+                        "#gen-ai",
+                        "#machine-learning",
+                        "#devops",
+                        "#backend",
+                        "#python",
+                        "#typescript",
+                        "#golang",
+                    ].map((tag) => (
+                        <span
+                            key={tag}
+                            className="flex items-center gap-1 px-4 py-1 bg-primary/10 border border-white/20 font-bold text-primary-100 rounded-full text-xs  hover:bg-white hover:text-primary transition"
+                        >
+                            {tag}
+                        </span>
+                    ))}
+                </div>
             </div>
             <div className="flex flex-col w-full items-center gap-9">
                 <p className="profile-card_desc">

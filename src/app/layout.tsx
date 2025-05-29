@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./global.css";
 import ProfileCard from "../components/ProfileCard";
 import Navbar from "../components/Navbar";
-import { Spotlight } from "../components/ui/spotlight";
+// import { Spotlight } from "../components/ui/spotlight";
 import MeshGradientBackground from "../components/ui/mesh-gradient-background";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -79,7 +79,7 @@ export default function RootLayout({
 
                 {/* Content layer */}
                 <div className="relative z-10 overflow-x-hidden overflow-y-auto pb-[5rem] sm:pb-[8rem] md:pb-[10rem]">
-                    <Spotlight
+                    {/* <Spotlight
                         className="bg-primary blur-[400px] -z-10"
                         size={256}
                         springOptions={{
@@ -87,7 +87,7 @@ export default function RootLayout({
                             bounce: 0.3,
                             duration: 0.1,
                         }}
-                    />
+                    /> */}
                     <Navbar />
                     <div className="main-container">
                         <div className="child-wrapper" id="home">
