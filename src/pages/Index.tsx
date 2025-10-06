@@ -4,19 +4,23 @@ import StatsSection from "@/components/StatsSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
+import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
+      {/* Navbar */}
+      <Navbar />
+      
       {/* Fixed Profile Card - Left Side */}
       <ProfileCard />
 
       {/* Main Content - Right Side */}
       <div className="w-full lg:w-[62%] lg:ml-[38%] min-h-screen">
         {/* Hero Section */}
-        <section className="min-h-screen flex flex-col justify-center px-6 lg:px-12 py-20">
+        <section id="home" className="min-h-screen flex flex-col justify-center px-6 lg:px-12 py-20">
           <div className="max-w-4xl">
             <AnimatedTitle />
             
@@ -50,17 +54,17 @@ const Index = () => {
         </section>
 
         {/* Skills Section */}
-        <section className="px-6 lg:px-12 py-20">
+        <section id="skills" className="px-6 lg:px-12 py-20">
           <SkillsSection />
         </section>
 
         {/* Projects Section */}
-        <section className="px-6 lg:px-12 py-20">
+        <section id="projects" className="px-6 lg:px-12 py-20">
           <ProjectsSection />
         </section>
 
         {/* Contact Section */}
-        <section className="px-6 lg:px-12 py-20">
+        <section id="contact" className="px-6 lg:px-12 py-20">
           <ContactSection />
         </section>
 

@@ -65,26 +65,43 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Keep light mode only for comic aesthetic */
-    --background: 40 35% 97%;
-    --foreground: 240 10% 15%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
-    --primary: 262 70% 60%;
+    /* Dark mode color scheme */
+    --background: 240 10% 8%;
+    --foreground: 40 35% 95%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 40 35% 95%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 40 35% 95%;
+
+    --primary: 262 70% 65%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 180 55% 65%;
-    --secondary-foreground: 240 10% 15%;
-    --muted: 40 25% 93%;
-    --muted-foreground: 240 5% 45%;
-    --accent: 12 85% 65%;
+
+    --secondary: 180 55% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 12 85% 60%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
+
+    --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
-    --border: 240 10% 80%;
-    --input: 240 10% 80%;
-    --ring: 262 70% 60%;
+
+    --border: 240 10% 25%;
+    --input: 240 10% 25%;
+    --ring: 262 70% 65%;
+
+    --sidebar-background: 240 10% 10%;
+    --sidebar-foreground: 40 35% 90%;
+    --sidebar-primary: 262 70% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 18%;
+    --sidebar-accent-foreground: 40 35% 90%;
+    --sidebar-border: 240 10% 25%;
+    --sidebar-ring: 262 70% 65%;
   }
 }
 

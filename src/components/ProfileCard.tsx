@@ -1,5 +1,4 @@
 import { Linkedin, Github, Mail, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const ProfileCard = () => {
   return (
@@ -7,7 +6,7 @@ const ProfileCard = () => {
       <div className="w-full max-w-md bg-card rounded-2xl border-3 border-foreground shadow-[6px_6px_0px_hsl(var(--foreground))] p-8 animate-fade-in">
         {/* Profile Image */}
         <div className="relative mb-6">
-          <div className="w-full aspect-square rounded-2xl overflow-hidden border-3 border-foreground bg-primary/20 shadow-[4px_4px_0px_hsl(var(--foreground))]">
+          <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden border-3 border-foreground bg-primary/20 shadow-[4px_4px_0px_hsl(var(--foreground))]">
             <img
               src="/api/placeholder/400/400"
               alt="Nakul Krishnakumar"
@@ -27,37 +26,29 @@ const ProfileCard = () => {
         </p>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-4 mb-6">
-          <Button
-            variant="sketch"
-            size="icon"
-            className="rounded-full"
-            asChild
+        <div className="flex justify-center gap-6 mb-6">
+          <a 
+            href="https://linkedin.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-foreground hover:-translate-y-1 transition-transform duration-200"
           >
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button
-            variant="sketch"
-            size="icon"
-            className="rounded-full"
-            asChild
+            <Linkedin className="h-6 w-6" />
+          </a>
+          <a 
+            href="https://github.com/nakul-krishnakumar" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-foreground hover:-translate-y-1 transition-transform duration-200"
           >
-            <a href="https://github.com/nakul-krishnakumar" target="_blank" rel="noopener noreferrer">
-              <Github className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button
-            variant="sketch"
-            size="icon"
-            className="rounded-full"
-            asChild
+            <Github className="h-6 w-6" />
+          </a>
+          <a 
+            href="mailto:your.email@example.com"
+            className="text-foreground hover:-translate-y-1 transition-transform duration-200"
           >
-            <a href="mailto:your.email@example.com">
-              <Mail className="h-5 w-5" />
-            </a>
-          </Button>
+            <Mail className="h-6 w-6" />
+          </a>
         </div>
 
         {/* Location */}
