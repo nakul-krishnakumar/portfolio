@@ -12,12 +12,13 @@ import { ArrowDown } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row">
-      {/* Navbar */}
+    <>
+      {/* Navbar - Outside main layout for true viewport positioning */}
       <Navbar />
       
-      {/* Fixed Profile Card - Left Side */}
-      <ProfileCard />
+      <div className="min-h-screen flex flex-col lg:flex-row">
+        {/* Fixed Profile Card - Left Side */}
+        <ProfileCard />
 
       {/* Main Content - Right Side */}
       <div className="w-full lg:w-[62%] lg:ml-[38%] min-h-screen">
@@ -91,6 +92,7 @@ const Index = () => {
         </footer>
       </div>
     </div>
+    </>
   );
 };
 

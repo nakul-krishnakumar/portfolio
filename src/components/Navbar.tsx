@@ -28,7 +28,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 lg:left-[57%]"
+      className="fixed top-4 inset-x-0 mx-auto z-50 w-fit"
     >
       <div className="bg-card/80 backdrop-blur-lg border-2 border-foreground rounded-full shadow-[4px_4px_0px_hsl(var(--foreground))] px-6 py-3">
         <div className="flex items-center gap-2">

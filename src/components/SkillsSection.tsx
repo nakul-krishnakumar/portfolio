@@ -1,6 +1,67 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Code2, Database, Brain, FileCode, Wrench, ChevronDown } from "lucide-react";
+import { 
+  Code2, Database, Brain, FileCode, Wrench, ChevronDown,
+  // Frontend icons
+  Atom, Globe, Palette, Zap, Blocks, FileText, Paintbrush, Sparkles,
+  // Backend icons
+  Server, Layers, Settings, Network, GitBranch, MonitorSpeaker, Database as DatabaseIcon, Cpu,
+  // AI/ML icons
+  Bot, Eye, Mic, Layers3, Target, Activity, Cloud,
+  // Language icons
+  Code, Terminal, Coffee, Hash, Binary, Command, Braces,
+  // Tools icons
+  Package, Edit, Figma, Send, Monitor, Workflow, CloudCog
+} from "lucide-react";
+
+// Skill icons mapping
+const skillIcons = {
+  // Frontend
+  "React": Atom,
+  "TypeScript": Code2,
+  "Tailwind CSS": Paintbrush,
+  "Next.js": Zap,
+  "Vite": Sparkles,
+  "HTML5": Globe,
+  "CSS3": Palette,
+  "Framer Motion": Blocks,
+  
+  // Backend
+  "Node.js": Server,
+  "Python": Terminal,
+  "PostgreSQL": DatabaseIcon,
+  "Express": Layers,
+  "REST APIs": Network,
+  "GraphQL": GitBranch,
+  "MongoDB": Database,
+  "Redis": Cpu,
+  
+  // AI & ML
+  "TensorFlow": Bot,
+  "PyTorch": Target,
+  "Scikit-learn": Activity,
+  "NLP": Mic,
+  "Computer Vision": Eye,
+  "Deep Learning": Brain,
+  "ML Ops": Cloud,
+  
+  // Languages
+  "JavaScript": Code,
+  "Java": Coffee,
+  "C++": Binary,
+  "SQL": Database,
+  "Bash": Terminal,
+  
+  // Tools
+  "Git": GitBranch,
+  "Docker": Package,
+  "VS Code": Edit,
+  "Figma": Figma,
+  "Postman": Send,
+  "Linux": Monitor,
+  "CI/CD": Workflow,
+  "AWS": CloudCog,
+};
 
 const skillCategories = [
   {
@@ -101,17 +162,22 @@ const SkillsSection = () => {
                       className="pt-4 pb-2 px-6"
                     >
                       <div className="flex flex-wrap gap-2">
-                        {category.skills.map((skill, skillIndex) => (
-                          <motion.span
-                            key={skill}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: skillIndex * 0.05 }}
-                            className="px-4 py-2 bg-muted rounded-full text-sm font-medium border border-border hover:border-foreground transition-colors"
-                          >
-                            {skill}
-                          </motion.span>
-                        ))}
+                        {category.skills.map((skill, skillIndex) => {
+                          const IconComponent = skillIcons[skill as keyof typeof skillIcons] || FileCode;
+                          
+                          return (
+                            <motion.span
+                              key={skill}
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: skillIndex * 0.05 }}
+                              className="px-4 py-2 bg-muted rounded-full text-sm font-medium border border-border hover:border-foreground transition-colors flex items-center gap-2"
+                            >
+                              <IconComponent className="h-4 w-4" />
+                              {skill}
+                            </motion.span>
+                          );
+                        })}
                       </div>
                     </motion.div>
                   </motion.div>
