@@ -194,7 +194,7 @@ const SkillsSection = () => {
 
     return (
         <section className="mb-16" id="skills">
-            <h2 className="text-4xl font-bold mb-8 text-foreground">SKILLS</h2>
+            <h2 className="text-4xl font-bold mb-8 text-center text-foreground">Skills</h2>
 
             <div className="flex flex-col gap-4">
                 {skillCategories.map((category, index) => {

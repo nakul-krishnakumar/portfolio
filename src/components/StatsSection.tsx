@@ -35,9 +35,9 @@ const StatCard = ({ value, numericValue, label, delay }: StatProps) => {
 const StatsSection = () => {
     const stats = [
         { value: "+1", numericValue: 1, label: "Years of Experience" },
-        { value: "+15", numericValue: 15, label: "Projects Completed" },
-        { value: "+18", numericValue: 18, label: "Techs Mastered" },
-        { value: "+230", numericValue: 230, label: "Successful Commits" },
+        { value: "+2", numericValue: 2, label: "Hackathon Wins" },
+        { value: "+20", numericValue: 20, label: "Opensource PRs Merged" },
+        { value: "+350", numericValue: 350, label: "Successful Commits" },
     ];
 
     return (

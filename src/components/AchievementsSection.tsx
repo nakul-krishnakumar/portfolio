@@ -3,64 +3,24 @@ import { Award, MapPin, Medal, Star, Target, Trophy, Zap } from "lucide-react";
 
 const achievements = [
     {
-        title: "Hac'KP 25 Most Lightweight Solution Award",
+        title: "Hac'KP 2025 Most Lightweight Solution Award",
         description:
-            "Won the award for significant contributions to the development of two products under Kerala Police Cyberdome and Childlight - Global Child Safety Institute to fight CSAM across the world.",
-        venue: "Hac'KP 25, c0c0n Conference, Kerala",
+            "Hac'KP is Kerala Police's Flagship International Hackathon. I won the award for significant contributions to the development of two products under Kerala Police Cyberdome and Childlight - Global Child Safety Institute to fight CSAM across the world.",
+        venue: "Hac'KP 2025, c0c0n Conference, Kerala",
         tags: ["Cybersecurity", "Software Development"],
         link: "https://www.linkedin.com/posts/nakul-krishnakumar-9aa951282_hackp2025-keralapolice-cyberdome-activity-7380857356991184896-4b0W?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",
         icon: Trophy,
         image: "https://images.unsplash.com/photo-1759821419390-6e6e34ccf73f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-        title: "Research Paper Published",
+        title: "'Providing Guidance' Track Winner IndoML'25 Datathon",
         description:
-            "Co-authored a paper on machine learning optimization techniques that was accepted and presented at an international conference.",
-        venue: "IEEE International Conference",
-        tags: ["Machine Learning"],
-        link: "https://www.linkedin.com/posts/nakul-krishnakumar-9aa951282_hackp2025-keralapolice-cyberdome-activity-7380857356991184896-4b0W?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",
+            "Part of four member team that won the 'Providing Guidance' track in IndoML'25 Datathon by building an ML model to evaluate LLM-Powered AI Tutors",
+        venue: "IndoML'25, BITS Pilani",
+        tags: ["Machine Learning", "Research"],
+        link: "https://www.linkedin.com/posts/clc-lab-iiit-kottayam_indoml-graduateforum-indoml-activity-7380883040773943296-YG2x?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",
         icon: Award,
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
-    },
-    {
-        title: "Open Source Top Contributor",
-        description:
-            "Recognized as one of the top 10 contributors to major open source projects with over 200 merged pull requests.",
-        venue: "GitHub Community",
-        tags: ["Open Source Development"],
-        link: "https://www.linkedin.com/posts/nakul-krishnakumar-9aa951282_hackp2025-keralapolice-cyberdome-activity-7380857356991184896-4b0W?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",
-        icon: Star,
-        image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop",
-    },
-    {
-        title: "Merit Scholarship",
-        description:
-            "Awarded full tuition scholarship for academic excellence and outstanding performance in computer science coursework.",
-        venue: "University Academic Board",
-        tags: ["Academic Excellence"],
-        link: "https://www.linkedin.com/posts/nakul-krishnakumar-9aa951282_hackp2025-keralapolice-cyberdome-activity-7380857356991184896-4b0W?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",
-        icon: Medal,
-        image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop",
-    },
-    {
-        title: "Technical Project Lead",
-        description:
-            "Successfully led a cross-functional team of 5 developers in delivering a scalable e-commerce platform ahead of schedule.",
-        venue: "Tech Solutions Inc.",
-        tags: ["Leadership & Development"],
-        link: "https://www.linkedin.com/posts/nakul-krishnakumar-9aa951282_hackp2025-keralapolice-cyberdome-activity-7380857356991184896-4b0W?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",
-        icon: Target,
-        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
-    },
-    {
-        title: "Innovation Award",
-        description:
-            "Received recognition for developing an innovative solution that reduced processing time by 60% using advanced algorithms.",
-        venue: "Tech Innovation Summit",
-        tags: ["Algorithm Optimization"],
-        link: "https://www.linkedin.com/posts/nakul-krishnakumar-9aa951282_hackp2025-keralapolice-cyberdome-activity-7380857356991184896-4b0W?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",
-        icon: Zap,
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
+        image: "./indoml25.jpg",
     },
 ];
 

@@ -22,14 +22,13 @@ const ProfileCard = () => {
 
                 {/* Bio */}
                 <p className="text-center text-muted-foreground mb-5 text-sm leading-relaxed">
-                    A developer with a passion for innovation and a commitment
-                    to excellence.
+                    Eager to learn, passionate to innovate, driven to succeed.
                 </p>
 
                 {/* Social Links */}
                 <div className="flex justify-center gap-5 mb-5">
                     <a
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/in/nakul-krishnakumar-9aa951282/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-foreground hover:-translate-y-1 transition-transform duration-200"
@@ -53,7 +52,7 @@ const ProfileCard = () => {
                         <Code2 className="h-6 w-6" />
                     </a>
                     <a
-                        href="mailto:your.email@example.com"
+                        href="mailto:nakulkrishnakumar86@gmail.com"
                         className="text-foreground hover:-translate-y-1 transition-transform duration-200"
                     >
                         <Mail className="h-6 w-6" />
