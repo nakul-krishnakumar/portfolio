@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
+import NumberTicker from "@/components/magicui/number-ticker";
 
 interface StatProps {
   value: string;
+  numericValue: number;
   label: string;
   delay: number;
 }
 
-const StatCard = ({ value, label, delay }: StatProps) => {
+const StatCard = ({ value, numericValue, label, delay }: StatProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -15,7 +17,14 @@ const StatCard = ({ value, label, delay }: StatProps) => {
       transition={{ delay, duration: 0.4 }}
       className="bg-card rounded-xl border-2 border-foreground p-6 text-center shadow-[3px_3px_0px_hsl(var(--foreground))] hover:shadow-[5px_5px_0px_hsl(var(--primary))] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
     >
-      <div className="text-4xl font-bold text-primary mb-2">{value}</div>
+      <div className="text-4xl font-bold text-primary mb-2 flex items-center justify-center">
+        {value.startsWith('+') && <span className="mr-1">+</span>}
+        <NumberTicker
+          value={numericValue}
+          delay={delay}
+          className="text-4xl font-bold text-primary"
+        />
+      </div>
       <div className="text-sm text-muted-foreground uppercase tracking-wide">{label}</div>
     </motion.div>
   );
@@ -23,10 +32,10 @@ const StatCard = ({ value, label, delay }: StatProps) => {
 
 const StatsSection = () => {
   const stats = [
-    { value: "+1", label: "Years of Experience" },
-    { value: "+15", label: "Projects Completed" },
-    { value: "+18", label: "Techs Mastered" },
-    { value: "+230", label: "Successful Commits" },
+    { value: "+1", numericValue: 1, label: "Years of Experience" },
+    { value: "+15", numericValue: 15, label: "Projects Completed" },
+    { value: "+18", numericValue: 18, label: "Techs Mastered" },
+    { value: "+230", numericValue: 230, label: "Successful Commits" },
   ];
 
   return (
@@ -35,8 +44,9 @@ const StatsSection = () => {
         <StatCard
           key={stat.label}
           value={stat.value}
+          numericValue={stat.numericValue}
           label={stat.label}
-          delay={index * 0.1}
+          delay={index * 0.2}
         />
       ))}
     </div>

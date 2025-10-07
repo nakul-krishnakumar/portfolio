@@ -11,56 +11,63 @@ import {
   // Language icons
   Code, Terminal, Coffee, Hash, Binary, Command, Braces,
   // Tools icons
-  Package, Edit, Figma, Send, Monitor, Workflow, CloudCog
+  Package, Edit, Figma, Send, Monitor, Workflow, CloudCog,
+  Smile
 } from "lucide-react";
 
 // Skill icons mapping
 const skillIcons = {
-  // Frontend
-  "React": Atom,
-  "TypeScript": Code2,
-  "Tailwind CSS": Paintbrush,
-  "Next.js": Zap,
-  "Vite": Sparkles,
-  "HTML5": Globe,
-  "CSS3": Palette,
-  "Framer Motion": Blocks,
-  
-  // Backend
-  "Node.js": Server,
-  "Python": Terminal,
-  "PostgreSQL": DatabaseIcon,
-  "Express": Layers,
-  "REST APIs": Network,
-  "GraphQL": GitBranch,
-  "MongoDB": Database,
-  "Redis": Cpu,
-  
-  // AI & ML
-  "TensorFlow": Bot,
-  "PyTorch": Target,
-  "Scikit-learn": Activity,
-  "NLP": Mic,
-  "Computer Vision": Eye,
-  "Deep Learning": Brain,
-  "ML Ops": Cloud,
-  
-  // Languages
-  "JavaScript": Code,
-  "Java": Coffee,
-  "C++": Binary,
-  "SQL": Database,
-  "Bash": Terminal,
-  
-  // Tools
-  "Git": GitBranch,
-  "Docker": Package,
-  "VS Code": Edit,
-  "Figma": Figma,
-  "Postman": Send,
-  "Linux": Monitor,
-  "CI/CD": Workflow,
-  "AWS": CloudCog,
+    // Frontend
+    "React.js": Atom,
+    "Next.js": Zap,
+    "Tailwind CSS": Paintbrush,
+    Vite: Sparkles,
+    HTML5: Globe,
+    CSS3: Palette,
+    "Framer Motion": Blocks,
+
+    // Backend
+    "Go net/http": Blocks,
+    "Node.js": Server,
+    "Express.js": Layers,
+    FastAPI: Settings,
+    PostgreSQL: DatabaseIcon,
+    "REST APIs": Network,
+    gRPC: GitBranch,
+    MongoDB: Database,
+    Redis: Cpu,
+    Kafka: MonitorSpeaker,
+
+    // AI & ML
+    TensorFlow: Bot,
+    OpenCV: Eye,
+    "Scikit-learn": Activity,
+    LangChain: Layers3,
+    LangGraph: GitBranch,
+    Huggingface: Smile,
+    GenAI: Bot,
+    MLFlow: Brain,
+    "ML Ops": Cloud,
+
+    // Languages
+    Go: Command,
+    Python: Terminal,
+    "C++": Binary,
+    TypeScript: Code2,
+    JavaScript: Code,
+    // Java: Coffee,
+    SQL: Database,
+    Bash: Terminal,
+
+    // Tools
+    Git: GitBranch,
+    Docker: Package,
+    "VS Code": Edit,
+    Figma: Figma,
+    Postman: Send,
+    Linux: Monitor,
+    // "CI/CD": Workflow,
+    AWS: CloudCog,
 };
 
 const skillCategories = [
@@ -69,35 +76,35 @@ const skillCategories = [
     name: "Frontend",
     icon: Code2,
     color: "text-primary",
-    skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vite", "HTML5", "CSS3", "Framer Motion"],
+    skills: ["React.js", "Next.js", "Tailwind CSS", "HTML5", "CSS3"],
   },
   {
     id: "backend",
     name: "Backend",
     icon: Database,
     color: "text-secondary",
-    skills: ["Node.js", "Python", "PostgreSQL", "Express", "REST APIs", "GraphQL", "MongoDB", "Redis"],
+    skills: ["Go net/http", "Node.js", "Express.js", "FastAPI", "PostgreSQL", "REST APIs", "gRPC", "MongoDB", "Redis", "Kafka"],
   },
   {
     id: "ai",
     name: "AI & ML",
     icon: Brain,
     color: "text-accent",
-    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision", "Deep Learning", "ML Ops"],
+    skills: ["TensorFlow", "OpenCV", "Scikit-learn", "LangChain", "LangGraph", "Huggingface", "GenAI", "MLFlow"],
   },
   {
     id: "languages",
     name: "Languages",
     icon: FileCode,
     color: "text-primary",
-    skills: ["JavaScript", "Python", "TypeScript", "Java", "C++", "SQL", "Bash"],
+    skills: [ "Go", "Python", "C++", "TypeScript", "JavaScript", "Java", "SQL", "Bash"],
   },
   {
     id: "tools",
     name: "Tools",
     icon: Wrench,
     color: "text-secondary",
-    skills: ["Git", "Docker", "VS Code", "Figma", "Postman", "Linux", "CI/CD", "AWS"],
+    skills: [ "Git", "Docker", "VS Code", "Figma", "Postman", "Linux", "AWS" ]
   },
 ];
 
