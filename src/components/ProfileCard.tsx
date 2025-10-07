@@ -8,7 +8,7 @@ const ProfileCard = () => {
         <div className="relative mb-5">
           <div className="w-4/5 mx-auto aspect-[4/5] rounded-2xl overflow-hidden border-3 border-foreground bg-primary/20 shadow-[4px_4px_0px_hsl(var(--foreground))]">
             <img
-              src="/api/placeholder/400/400"
+              src="./profile-card.svg"
               alt="Nakul Krishnakumar"
               className="w-full h-full object-cover"
             />
