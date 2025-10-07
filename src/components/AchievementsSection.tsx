@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, Award, Medal, Star, Target, Zap, Pin, MapPin } from "lucide-react";
+import { Award, MapPin, Medal, Star, Target, Trophy, Zap } from "lucide-react";
 
 const achievements = [
     {
@@ -65,120 +65,136 @@ const achievements = [
 ];
 
 const AchievementsSection = () => {
-  return (
-    <div>
-      <h2 className="text-4xl font-bold mb-12 text-center">
-        Achievements
-      </h2>
-      
-      <div className="space-y-12">
-        {achievements.map((achievement, index) => {
-          const Icon = achievement.icon;
-          const isEven = index % 2 === 0;
-          const rotations = [1, -1, 1.5, -1.5, 1, -1];
-          const rotation = rotations[index % rotations.length];
-          
-          return (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: isEven ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ 
-                y: -8, 
-                rotate: 0,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}
-              style={{ rotate: rotation }}
-              className="group relative max-w-5xl mx-auto"
-            >
-              {/* Pin at the top */}
+    return (
+        <div>
+            <h2 className="text-4xl font-bold mb-12 text-center">
+                Achievements
+            </h2>
+
+            <div className="space-y-12">
+                {achievements.map((achievement, index) => {
+                    const Icon = achievement.icon;
+                    const isEven = index % 2 === 0;
+                    const rotations = [1, -1, 1.5, -1.5, 1, -1];
+                    const rotation = rotations[index % rotations.length];
+
+                    return (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: isEven ? -20 : 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.2 }}
+                            viewport={{ once: true }}
+                            whileHover={{
+                                y: -8,
+                                rotate: 0,
+                                scale: 1.02,
+                                transition: { duration: 0.3 },
+                            }}
+                            style={{ rotate: rotation }}
+                            className="group relative max-w-5xl mx-auto"
+                        >
+                            {/* Pin at the top
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
                 <Pin className="h-10 w-10 text-destructive fill-destructive group-hover:rotate-12 transition-transform duration-300" />
-              </div>
-              
-              {/* Achievement Icon Badge */}
-              <div className={`absolute ${isEven ? '-top-2 -right-2' : '-top-2 -left-2'} z-20`}>
-                <div className="w-16 h-16 rounded-full border-3 border-foreground bg-primary flex items-center justify-center shadow-[4px_4px_0px_hsl(var(--foreground))] group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <Icon className="h-8 w-8 text-primary-foreground" />
-                </div>
-              </div>
-              
-              {/* Notice card */}
-              <div className={`relative bg-card border-3 border-foreground rounded-lg shadow-[8px_8px_0px_hsl(var(--foreground))] group-hover:shadow-[10px_10px_0px_hsl(var(--primary))] transition-all duration-300 cursor-pointer overflow-hidden flex ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
-                {/* Tape effect at corners */}
-                {/* <div className="absolute -top-1 -left-1 w-10 h-7 bg-muted/60 border border-border rotate-45 rounded-sm z-10" />
+              </div> */}
+
+                            {/* Achievement Icon Badge */}
+                            <div
+                                className={`absolute ${
+                                    isEven
+                                        ? "-top-2 -right-2"
+                                        : "-top-2 -left-2"
+                                } z-20`}
+                            >
+                                <div className="w-16 h-16 rounded-full border-3 border-foreground bg-primary flex items-center justify-center shadow-[4px_4px_0px_hsl(var(--foreground))] group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                                    <Icon className="h-8 w-8 text-primary-foreground" />
+                                </div>
+                            </div>
+
+                            {/* Notice card */}
+                            <div
+                                className={`relative bg-card border-3 border-foreground rounded-lg shadow-[4px_4px_0px_hsl(var(--foreground))] group-hover:shadow-[6px_6px_0px_hsl(var(--primary))] transition-all duration-300 cursor-pointer overflow-hidden flex flex-col md:flex-row ${
+                                    isEven
+                                        ? "md:flex-row"
+                                        : "md:flex-row-reverse"
+                                }`}
+                            >
+                                {/* Tape effect at corners */}
+                                {/* <div className="absolute -top-1 -left-1 w-10 h-7 bg-muted/60 border border-border rotate-45 rounded-sm z-10" />
                 <div className="absolute -top-1 -right-1 w-10 h-7 bg-muted/60 border border-border -rotate-45 rounded-sm z-10" /> */}
-                
-                {/* Image Section */}
-                <div className="w-[38%] relative overflow-hidden">
-                  <img 
-                    src={achievement.image} 
-                    alt={achievement.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" />
-                </div>
-                
-                {/* Content Section */}
-                <div className="w-[62%] p-8 pt-10 relative">
-                  {/* Paper texture lines */}
-                  <div className="absolute bottom-6 right-6 space-y-1 opacity-10">
-                    <div className="w-16 h-0.5 bg-foreground" />
-                    <div className="w-12 h-0.5 bg-foreground" />
-                    <div className="w-14 h-0.5 bg-foreground" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold mb-3 relative z-10">
-                    {achievement.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 relative z-10">
-                    {achievement.description}
-                  </p>
-                  
-                  <div className="flex flex-col gap-2 relative z-10">
-                    <div className="flex items-center gap-2 text-sm">
-                      <MapPin className="h-4 w-4 text-primary" />
-                      <span className="font-medium">{achievement.venue}</span>
-                    </div>
-                    
-                    <div className="inline-flex items-center gap-2">
-                      <span className="text-xs text-muted-foreground">Tags:</span>
-                      {
-                        achievement.tags.map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs font-medium text-primary"
-                          >
-                            {tag}
-                          </span>
-                        ))
-                      }
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {achievement.link && (
-                      <a
-                        href={achievement.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-4 inline-block text-sm text-primary font-medium hover:underline"
-                      >
-                        View More
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          );
-        })}
-      </div>
-    </div>
-  );
+
+                                {/* Image Section */}
+                                <div className="w-full md:w-[38%] h-48 md:h-auto relative overflow-hidden">
+                                    <img
+                                        src={achievement.image}
+                                        alt={achievement.title}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-primary/20 to-transparent" />
+                                </div>
+
+                                {/* Content Section */}
+                                <div className="w-full md:w-[62%] p-6 md:p-8 md:pt-10 relative">
+                                    {/* Paper texture lines */}
+                                    <div className="absolute bottom-6 right-6 space-y-1 opacity-10">
+                                        <div className="w-16 h-0.5 bg-foreground" />
+                                        <div className="w-12 h-0.5 bg-foreground" />
+                                        <div className="w-14 h-0.5 bg-foreground" />
+                                    </div>
+
+                                    <h3 className="text-2xl font-bold mb-3 relative z-10">
+                                        {achievement.title}
+                                    </h3>
+
+                                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 relative z-10">
+                                        {achievement.description}
+                                    </p>
+
+                                    <div className="flex flex-col gap-2 relative z-10">
+                                        <div className="flex items-center gap-2 text-sm">
+                                            <MapPin className="h-4 w-4 text-primary" />
+                                            <span className="font-medium">
+                                                {achievement.venue}
+                                            </span>
+                                        </div>
+
+                                        <div className="inline-flex items-center gap-2">
+                                            <span className="text-xs text-muted-foreground">
+                                                Tags:
+                                            </span>
+                                            {achievement.tags.map(
+                                                (tag, tagIndex) => (
+                                                    <span
+                                                        key={tagIndex}
+                                                        className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs font-medium text-primary"
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                )
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        {achievement.link && (
+                                            <a
+                                                href={achievement.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="mt-4 inline-block text-sm text-primary font-medium hover:underline"
+                                            >
+                                                View More
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    );
+                })}
+            </div>
+        </div>
+    );
 };
 
 export default AchievementsSection;
