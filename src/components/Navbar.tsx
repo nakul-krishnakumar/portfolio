@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Moon, Sun, Home, Code, Briefcase, Mail } from "lucide-react";
+import { Moon, Sun, Home, Code, Briefcase, Mail, Award, Lightbulb } from "lucide-react";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
@@ -18,7 +18,9 @@ const Navbar = () => {
   const navItems = [
     { id: "home", icon: Home, label: "Home" },
     { id: "skills", icon: Code, label: "Skills" },
-    { id: "projects", icon: Briefcase, label: "Projects" },
+    { id: "experience", icon: Briefcase, label: "Experience" },
+    { id: "projects", icon: Lightbulb, label: "Projects" },
+    { id: "achievements", icon: Award, label: "Achievements" },
     { id: "contact", icon: Mail, label: "Contact" },
   ];
 

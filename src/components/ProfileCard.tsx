@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail, MapPin } from "lucide-react";
+import { Linkedin, Github, Mail, MapPin, Code2 } from "lucide-react";
 
 const ProfileCard = () => {
   return (
@@ -42,6 +42,14 @@ const ProfileCard = () => {
             className="text-foreground hover:-translate-y-1 transition-transform duration-200"
           >
             <Github className="h-6 w-6" />
+          </a>
+          <a 
+            href="https://codolio.com/profile/nakul-krishnakumar/problemSolving"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-foreground hover:-translate-y-1 transition-transform duration-200"
+          >
+            <Code2 className="h-6 w-6" />
           </a>
           <a 
             href="mailto:your.email@example.com"
