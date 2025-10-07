@@ -3,6 +3,8 @@ import AnimatedTitle from "@/components/AnimatedTitle";
 import StatsSection from "@/components/StatsSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import ExperiencesSection from "@/components/ExperiencesSection";
+import AchievementsSection from "@/components/AchievementsSection";
 import ContactSection from "@/components/ContactSection";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -46,10 +48,13 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="flex items-center gap-2 text-muted-foreground animate-bounce-subtle">
+            <button 
+              onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
+              className="flex items-center gap-2 text-muted-foreground animate-bounce-subtle hover:text-foreground transition-colors cursor-pointer"
+            >
               <ArrowDown className="h-5 w-5" />
               <span className="text-sm">Scroll to explore</span>
-            </div>
+            </button>
           </div>
         </section>
 
@@ -58,9 +63,19 @@ const Index = () => {
           <SkillsSection />
         </section>
 
+        {/* Experiences Section */}
+        <section id="experience" className="px-6 lg:px-12 py-20">
+          <ExperiencesSection />
+        </section>
+
         {/* Projects Section */}
         <section id="projects" className="px-6 lg:px-12 py-20">
           <ProjectsSection />
+        </section>
+
+        {/* Achievements Section */}
+        <section id="achievements" className="px-6 lg:px-12 py-20">
+          <AchievementsSection />
         </section>
 
         {/* Contact Section */}
