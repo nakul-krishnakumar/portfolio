@@ -64,6 +64,9 @@ const projects = [
         title: "KaiyoAI - AI Powered Travel Planner App",
         description: [
             <>
+                Project In Progress.
+            </>,
+            <>
                 Integrated LLM response streaming to reduce wait time by{" "}
                 <strong className="font-semibold text-primary">70%</strong> and
                 achieved{" "}

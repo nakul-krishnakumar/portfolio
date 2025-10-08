@@ -5,7 +5,7 @@ const achievements = [
     {
         title: "Hac'KP 2025 Most Lightweight Solution Award",
         description:
-            "Hac'KP is Kerala Police's Flagship International Hackathon. I won the award for significant contributions to the development of two products under Kerala Police Cyberdome and Childlight - Global Child Safety Institute to fight CSAM across the world.",
+            "I won this award at Hac'KP - Kerala Police's Flagship International Hackathon for significant contributions to the development of two products under Kerala Police Cyberdome and Childlight - Global Child Safety Institute to fight CSAM across the world.",
         venue: "Hac'KP 2025, c0c0n Conference, Kerala",
         tags: ["Cybersecurity", "Software Development"],
         link: "https://www.linkedin.com/posts/nakul-krishnakumar-9aa951282_hackp2025-keralapolice-cyberdome-activity-7380857356991184896-4b0W?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",
@@ -15,7 +15,7 @@ const achievements = [
     {
         title: "'Providing Guidance' Track Winner IndoML'25 Datathon",
         description:
-            "Part of four member team that won the 'Providing Guidance' track in IndoML'25 Datathon by building an ML model to evaluate LLM-Powered AI Tutors",
+            "Part of four member team that won the 'Providing Guidance' track in IndoML'25 Datathon by building an ML model to evaluate LLM-Powered AI Tutors. ",
         venue: "IndoML'25, BITS Pilani",
         tags: ["Machine Learning", "Research"],
         link: "https://www.linkedin.com/posts/clc-lab-iiit-kottayam_indoml-graduateforum-indoml-activity-7380883040773943296-YG2x?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",

@@ -13,8 +13,11 @@ const experiences = [
             </>,
             <>
                 Developed and secured 10+ authenticated API routes, ensuring
-                zero data leaks and maintaining 100% compliance with content
-                handling policies for sensitive CSAM data.
+                zero data leaks and maintaining{" "}
+                <strong className="font-semibold text-primary">
+                    100% compliance
+                </strong>{" "}
+                with content handling policies for sensitive CSAM data.
             </>,
             <>
                 Developed webhook endpoints to connect the service to web
@@ -26,6 +29,54 @@ const experiences = [
             </>,
         ],
         tags: ["FastAPI", "Docker", "MongoDB", "REST APIs"],
+    },
+    {
+        role: "Open Source Contributor - Stdlib",
+        company: "stdlib-js/stdlib",
+        period: "2025 August - Present",
+        link: "https://github.com/stdlib-js/stdlib/commits/develop/?author=nakul-krishnakumar",
+        description: [
+            <>
+                Added multiple fast versions of core algorithms, focusing on
+                speed and efficiency.
+            </>,
+            <>
+                Wrote structured metadata for multiple packages to enhance
+                clarity and maintainability.
+            </>,
+            <>
+                Wrote C implementations for multiple math algorithms to improve
+                performance by 2x-10x.
+            </>,
+        ],
+        tags: ["Typescript", "Javascript", "Node.js", "C"],
+    },
+    {
+        role: "Student Researcher",
+        company: "IBM Global Remote Mentoring Program",
+        period: "2025 July - Present",
+        description: [
+            <>
+                Building a large-scale benchmark for evaluating IR systems in
+                Malayalam.
+            </>,
+            <>
+                Researching about current Information Retrieval systems in
+                Malayalam language and their limitations.
+            </>,
+            <>
+                Translated BEIR datasets to Malayalam using a custom translation
+                pipeline.
+            </>,
+            <>
+                Evaluated current IR models like{" "}
+                <strong className="font-semibold text-primary">
+                    bge-m3, multilingual-e5-large
+                </strong>{" "}
+                on existing IR datasets in malayalam.
+            </>,
+        ],
+        tags: ["Python", "Huggingface", "MLFlow"],
     },
     {
         role: "AI Engineer Intern",
@@ -96,7 +147,18 @@ const ExperiencesSection = () => {
                             <div className="flex items-start justify-between mb-3">
                                 <div>
                                     <h3 className="text-xl font-bold mb-1">
-                                        {exp.role}
+                                        {exp.link ? (
+                                            <a
+                                                href={exp.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="hover:underline"
+                                            >
+                                                {exp.role}
+                                            </a>
+                                        ) : (
+                                            exp.role
+                                        )}
                                     </h3>
                                     <div className="flex items-center gap-2 text-muted-foreground text-sm">
                                         <Briefcase className="h-4 w-4" />

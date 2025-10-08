@@ -49,7 +49,17 @@ const Index = () => {
                             <StatsSection />
 
                             <div className="flex gap-4 mb-12 justify-center lg:justify-start">
-                                <Button variant="hero" size="lg">
+                                <Button
+                                    onClick={() =>
+                                        document
+                                            .getElementById("contact")
+                                            ?.scrollIntoView({
+                                                behavior: "smooth",
+                                            })
+                                    }
+                                    variant="hero"
+                                    size="lg"
+                                >
                                     Contact Me
                                 </Button>
                                 <Button variant="sketch" size="lg">
