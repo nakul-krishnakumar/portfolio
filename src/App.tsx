@@ -16,6 +16,8 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <TooltipProvider>
+        <SpeedInsights />
+        <Analytics />
         <Toaster />
         <Sonner />
         <BrowserRouter>
@@ -23,8 +25,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
-            {/* <SpeedInsights />
-            <Analytics /> */}
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
