@@ -283,7 +283,7 @@ const SkillsSection = () => {
                                                                         skillIndex *
                                                                         0.05,
                                                                 }}
-                                                                className="px-4 py-2 bg-muted rounded-full text-sm font-medium border border-border hover:border-foreground transition-colors flex items-center gap-2"
+                                                                className="px-4 py-2 bg-muted rounded-full text-sm font-medium border border-border hover:border-foreground transition-colors flex items-center gap-2 hover:cursor-default"
                                                             >
                                                                 <IconComponent className="h-4 w-4" />
                                                                 {skill}
