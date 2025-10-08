@@ -63,7 +63,16 @@ const Index = () => {
                                 >
                                     Contact Me
                                 </Button>
-                                <Button variant="sketch" size="lg">
+                                <Button
+                                    variant="sketch"
+                                    size="lg"
+                                    onClick={() =>
+                                        window.open(
+                                            "https://drive.google.com/file/d/1690HqWMwedEIsfPxv5aZyjm1Rvmx9hgi/view?usp=sharing",
+                                            "_blank"
+                                        )
+                                    }
+                                >
                                     View Resume
                                 </Button>
                             </div>
