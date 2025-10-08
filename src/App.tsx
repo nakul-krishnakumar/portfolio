@@ -23,8 +23,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
-            <SpeedInsights />
-            <Analytics />
+            {/* <SpeedInsights />
+            <Analytics /> */}
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
