@@ -2,8 +2,8 @@ import { TypeAnimation } from "react-type-animation";
 
 const AnimatedTitle = () => {
     return (
-        <div className="relative h-24 sm:h-32 flex items-center justify-center lg:justify-start overflow-hidden w-full">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-center lg:text-left">
+        <div className="relative min-h-24 sm:min-h-32 flex items-center justify-center lg:justify-start w-full py-4">
+            <h1 className="text-5xl sm:text-6xl lg:text-[80px] font-bold leading-tight text-center lg:text-left">
                 <TypeAnimation
                     sequence={[
                         "SOFTWARE\nENGINEER",
@@ -23,6 +23,7 @@ const AnimatedTitle = () => {
                         backgroundClip: "text",
                         WebkitBackgroundClip: "text",
                         color: "transparent",
+                        fontWeight: 800,
                     }}
                 />
             </h1>

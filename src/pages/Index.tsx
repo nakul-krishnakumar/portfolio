@@ -7,6 +7,7 @@ import ProfileCard from "@/components/ProfileCard";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import StatsSection from "@/components/StatsSection";
+import VisitCounter from "@/components/VisitCounter";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -107,18 +108,24 @@ const Index = () => {
                     <section id="contact" className="px-6 lg:px-12 py-20">
                         <ContactSection />
                     </section>
+                </div>
+            </div>
 
-                    {/* Footer */}
-                    <footer className="px-6 lg:px-12 py-8 border-t-2 border-border">
-                        <div className="text-center text-muted-foreground text-sm">
+            {/* Footer - Full width across screen */}
+            <footer className="w-full border-t-2 border-border">
+                <div className="px-6 lg:px-12 py-8">
+                    <div className="flex flex-row items-center justify-between gap-4 text-center">
+                        <div className=""></div>
+                        <div className="text-muted-foreground text-sm">
                             <p>
                                 © 2025 Nakul Krishnakumar. Built with passion &
                                 code.
                             </p>
                         </div>
-                    </footer>
+                        <VisitCounter />
+                    </div>
                 </div>
-            </div>
+            </footer>
         </>
     );
 };

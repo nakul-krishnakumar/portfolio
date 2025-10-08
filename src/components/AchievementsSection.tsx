@@ -13,9 +13,9 @@ const achievements = [
         image: "https://images.unsplash.com/photo-1759821419390-6e6e34ccf73f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-        title: "'Providing Guidance' Track Winner IndoML'25 Datathon",
+        title: "IndoML'25 Datathon Dev Phase Winner",
         description:
-            "Part of four member team that won the 'Providing Guidance' track in IndoML'25 Datathon by building an ML model to evaluate LLM-Powered AI Tutors. ",
+            "Part of four member team that won the 'Providing Guidance' track in the Development Phase of IndoML 2025 Datathon by building an ML model to evaluate LLM-Powered AI Tutors. ",
         venue: "IndoML'25, BITS Pilani",
         tags: ["Machine Learning", "Research"],
         link: "https://www.linkedin.com/posts/clc-lab-iiit-kottayam_indoml-graduateforum-indoml-activity-7380883040773943296-YG2x?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAETW7VIBcUP0YMDH19lP1Ni-xiI_5w6jfv8",

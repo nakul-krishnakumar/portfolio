@@ -27,7 +27,7 @@ const ContactSection = () => {
             className="bg-white text-primary hover:bg-white/90 border-2 border-foreground"
             asChild
           >
-            <a href="mailto:your.email@example.com">
+            <a href="mailto:nakulkrishnakumar86@gmail.com">
               <Send className="mr-2" />
               Get In Touch
             </a>

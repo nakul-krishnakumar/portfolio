@@ -31,7 +31,7 @@ const ProfileCard = () => {
                         href="https://www.linkedin.com/in/nakul-krishnakumar-9aa951282/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-foreground hover:-translate-y-1 transition-transform duration-200"
+                        className="text-foreground hover:-translate-y-1 transition-transform duration-200 hover:text-primary"
                     >
                         <Linkedin className="h-6 w-6" />
                     </a>
@@ -39,7 +39,7 @@ const ProfileCard = () => {
                         href="https://github.com/nakul-krishnakumar"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-foreground hover:-translate-y-1 transition-transform duration-200"
+                        className="text-foreground hover:-translate-y-1 transition-transform duration-200 hover:text-primary"
                     >
                         <Github className="h-6 w-6" />
                     </a>
@@ -47,13 +47,13 @@ const ProfileCard = () => {
                         href="https://codolio.com/profile/nakul-krishnakumar/problemSolving"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-foreground hover:-translate-y-1 transition-transform duration-200"
+                        className="text-foreground hover:-translate-y-1 transition-transform duration-200 hover:text-primary"
                     >
                         <Code2 className="h-6 w-6" />
                     </a>
                     <a
                         href="mailto:nakulkrishnakumar86@gmail.com"
-                        className="text-foreground hover:-translate-y-1 transition-transform duration-200"
+                        className="text-foreground hover:-translate-y-1 transition-transform duration-200 hover:text-primary"
                     >
                         <Mail className="h-6 w-6" />
                     </a>

@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, ExternalLink } from "lucide-react";
+import { Timeline } from "./ui/timeline";
 
 const experiences = [
     {
         role: "Backend Developer",
         company: "Kerala Police Cyberdome Grapnel Team",
-        period: "2025 October - Present",
+        period: "October 2025 - Present",
         description: [
             <>
                 Contributed to building a backend service for a CSAM take down
@@ -33,7 +34,7 @@ const experiences = [
     {
         role: "Open Source Contributor - Stdlib",
         company: "stdlib-js/stdlib",
-        period: "2025 August - Present",
+        period: "August 2025 - Present",
         link: "https://github.com/stdlib-js/stdlib/commits/develop/?author=nakul-krishnakumar",
         description: [
             <>
@@ -54,7 +55,7 @@ const experiences = [
     {
         role: "Student Researcher",
         company: "IBM Global Remote Mentoring Program",
-        period: "2025 July - Present",
+        period: "July 2025 - Present",
         description: [
             <>
                 Building a large-scale benchmark for evaluating IR systems in
@@ -81,7 +82,7 @@ const experiences = [
     {
         role: "AI Engineer Intern",
         company: "Bluestack Technologies",
-        period: "2025 May - 2025 Aug",
+        period: "May 2025 - August 2025",
         description: [
             <>
                 Built end-to-end computer vision pipeline with{" "}
@@ -122,77 +123,72 @@ const experiences = [
 ];
 
 const ExperiencesSection = () => {
+    // Transform experiences data for Timeline component
+    const timelineData = experiences.map((exp) => ({
+        title: exp.period,
+        content: (
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="mb-10"
+            >
+                <div className="bg-card border-2 border-foreground rounded-xl p-6 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:shadow-[6px_6px_0px_hsl(var(--primary))] hover:-translate-y-1 transition-all duration-300">
+                    <div className="mb-3">
+                        <h3 className="text-xl font-bold mb-1 text-foreground">
+                            {exp.link ? (
+                                <a
+                                    href={exp.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:underline flex items-center gap-2 group"
+                                >
+                                    {exp.role}
+                                    <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                                </a>
+                            ) : (
+                                exp.role
+                            )}
+                        </h3>
+                        <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                            <Briefcase className="h-4 w-4" />
+                            <span className="font-medium">{exp.company}</span>
+                        </div>
+                    </div>
+
+                    <ul className="text-muted-foreground mb-4 leading-relaxed list-disc list-inside space-y-1">
+                        {exp.description.map((desc, index) => (
+                            <li key={index} className="text-sm">
+                                {desc}
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div className="flex flex-wrap gap-2">
+                        {exp.tags.map((tag) => (
+                            <span
+                                key={tag}
+                                className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-xs rounded-full font-medium hover:bg-primary/20 transition-colors"
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </motion.div>
+        ),
+    }));
+
     return (
         <div>
-            <h2 className="text-4xl font-bold mb-12 text-center">Experience</h2>
-
-            <div className="relative w-full max-w-none -ml-8 sm:ml-0 mr-2 sm:mr-4 lg:mr-6">
-                {/* Vertical line */}
-                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border" />
-
-                {experiences.map((exp, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.2 }}
-                        viewport={{ once: true }}
-                        className="relative pl-20 pb-12 group"
-                    >
-                        {/* Timeline dot */}
-                        <div className="absolute left-6 top-2 w-5 h-5 rounded-full border-3 border-foreground bg-primary group-hover:scale-125 transition-transform duration-300" />
-
-                        {/* Content card */}
-                        <div className="bg-card -ml-6 sm:ml-0 border-2 border-foreground rounded-xl p-6 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:shadow-[6px_6px_0px_hsl(var(--primary))] hover:-translate-y-1 transition-all duration-300 w-full">
-                            <div className="flex items-start justify-between mb-3">
-                                <div>
-                                    <h3 className="text-xl font-bold mb-1">
-                                        {exp.link ? (
-                                            <a
-                                                href={exp.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="hover:underline"
-                                            >
-                                                {exp.role}
-                                            </a>
-                                        ) : (
-                                            exp.role
-                                        )}
-                                    </h3>
-                                    <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                                        <Briefcase className="h-4 w-4" />
-                                        <span>{exp.company}</span>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-1 text-sm text-muted-foreground border-2 border-border rounded-lg px-3 py-1">
-                                    <Calendar className="h-4 w-4" />
-                                    <span>{exp.period}</span>
-                                </div>
-                            </div>
-
-                            <ul className="text-muted-foreground mb-4 leading-relaxed list-disc list-inside">
-                                {exp.description.map((desc, index) => (
-                                    <li key={index} className="mb-1">
-                                        {desc}
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <div className="flex flex-wrap gap-2">
-                                {exp.tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="px-3 py-1 bg-primary/10 border-2 border-primary/20 text-primary text-sm rounded-lg font-medium"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
+            <h2 className="text-4xl font-bold mb-4 text-center text-foreground">
+                Experience
+            </h2>
+            <p className="text-muted-foreground text-center text-base max-w-md mx-auto mb-8">
+                My professional journey and key contributions
+            </p>
+            <Timeline data={timelineData} />
         </div>
     );
 };

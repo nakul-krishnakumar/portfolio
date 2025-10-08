@@ -15,6 +15,7 @@ import {
     SiDiscord,
     SiDjango,
     SiDocker,
+    SiEjs,
     SiEslint,
     SiExpress,
     SiFastapi,
@@ -63,9 +64,7 @@ const projects = [
     {
         title: "KaiyoAI - AI Powered Travel Planner App",
         description: [
-            <>
-                Project In Progress.
-            </>,
+            <>Project In Progress.</>,
             <>
                 Integrated LLM response streaming to reduce wait time by{" "}
                 <strong className="font-semibold text-primary">70%</strong> and
@@ -77,7 +76,7 @@ const projects = [
         ],
         tags: ["Next.js", "Go", "OpenAI", "Supabase"],
         github: "https://github.com/nakul-krishnakumar/kaiyo-ai",
-        demo: "#",
+        // demo: "#",
     },
     {
         title: "VidhAI - AI Powered Legal Assistant",
@@ -113,6 +112,28 @@ const projects = [
         github: "https://github.com/nakul-krishnakumar/vidh-ai",
         demo: "https://vidh-ai.streamlit.app/",
     },
+    {
+        title: "Zly - URL Shortener",
+        description: [
+            <>
+                Custom made URL shortener written from scratch.
+            </>,
+            <>
+                Implemented{" "}
+                <strong className="font-semibold text-primary">
+                    server-side rendering
+                </strong>{" "}
+                for faster initial load times and improved SEO.
+            </>,
+            <>
+                Implemented URL data storing for user analytics including click
+                counts.
+            </>,
+        ],
+        tags: ["Node.js", "Express.js", "MongoDB", "EJS", "HTML5"],
+        github: "https://github.com/nakul-krishnakumar/url-shortener",
+        demo: "https://z-ly.onrender.com/",
+    },
 ];
 
 // Tech stack icons mapping
@@ -145,7 +166,8 @@ const techIcons = {
 
     // Backend & APIs
     "Node.js": SiNodedotjs,
-    Express: SiExpress,
+    "Express.js": SiExpress,
+    EJS: SiEjs,
     Python: SiPython,
     Flask: SiFlask,
     Django: SiDjango,
@@ -325,16 +347,19 @@ const ProjectsSection = () => {
                                     Code
                                 </a>
                             </Button>
-                            <Button variant="hero" size="sm" asChild>
-                                <a
-                                    href={project.demo}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <ExternalLink className="h-4 w-4 mr-2" />
-                                    Demo
-                                </a>
-                            </Button>
+                            {
+                                project.demo && (
+                                    <Button variant="hero" size="sm" asChild>
+                                        <a
+                                            href={project.demo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <ExternalLink className="h-4 w-4 mr-2" />
+                                            Demo
+                                        </a>
+                                    </Button>
+                                )}
                         </div>
                     </motion.div>
                 ))}
