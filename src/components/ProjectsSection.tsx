@@ -115,9 +115,7 @@ const projects = [
     {
         title: "Zly - URL Shortener",
         description: [
-            <>
-                Custom made URL shortener written from scratch.
-            </>,
+            <>Custom made URL shortener written from scratch.</>,
             <>
                 Implemented{" "}
                 <strong className="font-semibold text-primary">
@@ -251,9 +249,12 @@ const ProjectsSection = () => {
     };
     return (
         <section className="mb-16">
-            <h2 className="text-4xl font-bold mb-8 text-center text-foreground">
+            <h2 className="text-4xl font-bold mb-4 text-center text-foreground">
                 Featured Projects
             </h2>
+            <p className="text-muted-foreground text-center text-base max-w-md mx-auto mb-8">
+                Showcasing my development work and solutions
+            </p>
 
             {/* Tech Stack Filters */}
             <div className="mb-8">
@@ -347,19 +348,18 @@ const ProjectsSection = () => {
                                     Code
                                 </a>
                             </Button>
-                            {
-                                project.demo && (
-                                    <Button variant="hero" size="sm" asChild>
-                                        <a
-                                            href={project.demo}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <ExternalLink className="h-4 w-4 mr-2" />
-                                            Demo
-                                        </a>
-                                    </Button>
-                                )}
+                            {project.demo && (
+                                <Button variant="hero" size="sm" asChild>
+                                    <a
+                                        href={project.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <ExternalLink className="h-4 w-4 mr-2" />
+                                        Demo
+                                    </a>
+                                </Button>
+                            )}
                         </div>
                     </motion.div>
                 ))}

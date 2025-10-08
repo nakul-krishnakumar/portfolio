@@ -1,6 +1,8 @@
 import { Code2, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const ProfileCard = () => {
+    const { theme } = useTheme();
     return (
         <div className="w-full lg:w-[38%] lg:fixed lg:h-screen flex items-center justify-center p-4 lg:p-6 mt-24 lg:mt-0">
             <div className="w-full max-w-sm bg-card rounded-2xl border-3 border-foreground shadow-[6px_6px_0px_hsl(var(--foreground))] p-6 animate-fade-in">
@@ -8,7 +10,11 @@ const ProfileCard = () => {
                 <div className="relative mb-5">
                     <div className="w-4/5 mx-auto aspect-[4/5] rounded-2xl overflow-hidden border-3 border-foreground bg-primary/20 shadow-[4px_4px_0px_hsl(var(--foreground))]">
                         <img
-                            src="./profile-card3.svg"
+                            src={
+                                theme === "dark"
+                                    ? "./profile-card.svg"
+                                    : "./profile-card-dark.svg"
+                            }
                             alt="Nakul Krishnakumar"
                             className="w-full h-full object-cover scale-110"
                         />

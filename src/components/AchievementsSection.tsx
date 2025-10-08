@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Award, MapPin, Medal, Star, Target, Trophy, Zap } from "lucide-react";
+import { Award, MapPin, Trophy } from "lucide-react";
 
 const achievements = [
     {
@@ -27,9 +27,12 @@ const achievements = [
 const AchievementsSection = () => {
     return (
         <div>
-            <h2 className="text-4xl font-bold mb-12 text-center">
+            <h2 className="text-4xl font-bold mb-4 text-center">
                 Achievements
             </h2>
+            <p className="text-muted-foreground text-center text-base max-w-md mx-auto mb-12">
+                Recognition and milestones in my journey
+            </p>
 
             <div className="space-y-12">
                 {achievements.map((achievement, index) => {
