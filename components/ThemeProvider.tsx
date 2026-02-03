@@ -15,16 +15,15 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
-  // Initialize theme from localStorage or system preference
+  // Initialize theme from localStorage only (default to light)
   useEffect(() => {
     setMounted(true);
     const storedTheme = localStorage.getItem("theme") as Theme | null;
     
     if (storedTheme) {
       setTheme(storedTheme);
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
     }
+    // Default is already "light", no need to check system preference
   }, []);
 
   // Apply theme class to document
