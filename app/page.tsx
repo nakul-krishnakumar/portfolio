@@ -44,7 +44,7 @@ function AboutSection() {
       icon: Brain,
       title: "AI/ML",
       description:
-        "Building intelligent systems with LangChain, TensorFlow, and RAG architectures",
+        "Building intelligent systems with LangChain, PyTorch, and RAG architectures",
       bgColor: "#9933FF",
     },
     {
