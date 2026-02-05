@@ -6,3 +6,4 @@ export {
   HackathonCard,
   CertificationCard,
 } from "./AchievementCard";
+export { AchievementsSection } from "./Achievements";

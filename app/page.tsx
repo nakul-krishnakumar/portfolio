@@ -26,7 +26,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Button, Card, Badge, Input, Textarea, TechIcon } from "@/components/ui";
-import { Hero, FeaturedProjects } from "@/components/sections";
+import { Hero, FeaturedProjects, AchievementsSection } from "@/components/sections";
 import { TimelineItem } from "@/components/sections/TimelineItem";
 import {
   projects,
@@ -800,6 +800,7 @@ export default function HomePage() {
       <ProjectsSection />
       <SkillsSection />
       <ExperienceSection />
+      <AchievementsSection />
       <ContactSection />
     </>
   );
