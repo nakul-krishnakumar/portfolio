@@ -139,11 +139,41 @@ export const projects = [
 export const experiences = [
   {
     id: 1,
+    role: "Machine Learning Engineer Intern",
+    company: "Sarvam AI",
+    companyUrl: "https://www.sarvam.ai/",
+    location: "Bangalore, Karnataka",
+    duration: "May 2026 - Present",
+    description: [
+      "Working at Sarvam AI on building Sovereign TTS infrastructure for India",
+      "Contributing to research and engineering of enterprise-grade Text-to-Speech systems tailored for the Indian population and Indic languages",
+      "Building and optimizing ML pipelines and LLM-based systems for production-scale deployment",
+    ],
+    technologies: ["Python", "PyTorch", "vLLM", "Speech", "Slurm", "Distributed Systems"],
+    color: "neo-red",
+  },
+  {
+    id: 2,
+    role: "Google Summer of Code Mentee",
+    company: "stdlib-js (Google Summer of Code)",
+    companyUrl: "https://summerofcode.withgoogle.com/programs/2026",
+    location: "Remote",
+    duration: "May 2026 - Present",
+    description: [
+      "Selected as a GSoC 2026 mentee under stdlib-js, a standard library for JavaScript and Node.js focused on numerical and scientific computing",
+      "Designing and implementing performant numerical/statistical APIs in JavaScript and C, with rigorous attention to numerical accuracy, benchmarks, and documentation",
+      "Collaborating with stdlib maintainers under structured mentorship to deliver production-quality contributions to the open source ecosystem",
+    ],
+    technologies: ["JavaScript", "Node.js", "C", "Mathematics", "Scientific Computing", "Open Source"],
+    color: "neo-orange",
+  },
+  {
+    id: 3,
     role: "Student Researcher",
     company: "CyberLabs IIIT Kottayam",
     companyUrl: "https://cyberlabs.iiitkottayam.ac.in/",
     location: "IIIT Kottayam, Kerala",
-    duration: "October 2025 - Present",
+    duration: "October 2025 - May 2026",
     description: [
       "Researching privacy-preserving machine learning through Federated Learning on Blockchain with Differential Privacy",
       "Building decentralized ML training pipelines using Hyperledger Fabric for secure model aggregation and tamper-proof audit trails",
@@ -153,7 +183,7 @@ export const experiences = [
     color: "neo-purple",
   },
   {
-    id: 2,
+    id: 4,
     role: "Backend Developer",
     company: "Kerala Police Cyberdome",
     // companyUrl: "https://cyberdome.kerala.gov.in/",
@@ -168,7 +198,7 @@ export const experiences = [
     color: "neo-blue",
   },
   {
-    id: 3,
+    id: 5,
     role: "Open Source Contributor",
     company: "stdlib-js/stdlib",
     companyUrl: "https://github.com/stdlib-js/stdlib",
@@ -182,7 +212,7 @@ export const experiences = [
     color: "neo-yellow",
   },
   {
-    id: 4,
+    id: 6,
     role: "AI Engineer Intern",
     company: "Bluecast Technologies",
     companyUrl: "https://www.bluecast.tech/",
